@@ -20,16 +20,34 @@
  * @copyright   Copyright (c) 2015 MaxServ (http://www.maxserv.com)
  * @license     http://opensource.org/licenses/GPL-3.0 General Public License (GPL 3.0)
  */
-namespace Jmod\Cms\Block\Page;
+namespace Jcode\Cms\Block\Page;
 
 use Jcode\Application;
 use Jcode\Application\Environment;
 use Jcode\Layout\Resource\Template;
 
-class Footer extends Template
+class Html extends Template
 {
 
+    protected $cssFiles = [];
+
     protected $jsFiles = [];
+
+    /**
+     * Get all added CSS files
+     *
+     * @return array
+     */
+    public function getCssFiles()
+    {
+        $html = '';
+
+        foreach ($this->cssFiles as $file) {
+            $html .= '<link rel="stylesheet" type="text/css" href="' . Application::getBaseUrl(Environment::URL_TYPE_CSS) . '/' . $file . '">';
+        }
+
+        return $html;
+    }
 
     /**
      * Return all added JS files
@@ -54,6 +72,18 @@ class Footer extends Template
     public function addJs($file)
     {
         $this->jsFiles[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * @param $file
+     *
+     * @return $this
+     */
+    public function addCss($file)
+    {
+        $this->cssFiles[] = $file;
 
         return $this;
     }

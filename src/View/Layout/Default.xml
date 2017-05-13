@@ -24,22 +24,22 @@
 -->
 <layout>
 
-	<request path="Jmod_Cms::Default">
+	<request path="Jcode_Cms::Default">
 		<reference name="root">
 			<block class="Jcode\Layout\Resource\Template" name="page.root">
-				<method name="setTemplate"><template>Jmod_Cms::Page/Layout/1-column.phtml</template></method>
+				<method name="setTemplate"><template>Jcode_Cms::Page/Layout/1-column.phtml</template></method>
 			</block>
 		</reference>
 
 		<reference name="head">
-			<block class="Jmod\Cms\Block\Page\Html" name="head" template="Jmod_Cms::Page/Layout/Html/Head.phtml">
+			<block class="Jcode\Cms\Block\Page\Html" name="head" template="Jcode_Cms::Page/Layout/Html/Head.phtml">
 				<method name="addCss"><css>foundation.css</css></method>
 				<method name="addCss"><css>style.css</css></method>
 			</block>
 		</reference>
 
 		<reference name="footer">
-			<block class="Jmod\Cms\Block\Page\Html" name="footer" template="Jmod_Cms::Page/Layout/Html/Footer.phtml">
+			<block class="Jcode\Cms\Block\Page\Html" name="footer" template="Jcode_Cms::Page/Layout/Html/Footer.phtml">
 				<method name="addJs"><js>foundation.min.js</js></method>
 			</block>
 		</reference>

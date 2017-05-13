@@ -20,7 +20,7 @@
  * @copyright   Copyright (c) 2015 MaxServ (http://www.maxserv.com)
  * @license     http://opensource.org/licenses/GPL-3.0 General Public License (GPL 3.0)
  */
-namespace Jmod\Cms\Controller;
+namespace Jcode\Cms\Controller;
 
 use Jcode\Router\Front\Controller;
 
