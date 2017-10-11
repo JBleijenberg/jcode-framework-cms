@@ -33,7 +33,7 @@ class Footer extends Template
 
     /**
      * Return all added JS files
-     * @return array
+     * @return string
      */
     public function getJsFiles()
     {

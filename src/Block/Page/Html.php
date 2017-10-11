@@ -36,7 +36,7 @@ class Html extends Template
     /**
      * Get all added CSS files
      *
-     * @return array
+     * @return string
      */
     public function getCssFiles()
     {
@@ -51,7 +51,7 @@ class Html extends Template
 
     /**
      * Return all added JS files
-     * @return array
+     * @return string
      */
     public function getJsFiles()
     {
