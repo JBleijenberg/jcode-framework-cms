@@ -1,0 +1,6 @@
+---
+name: Jcode_Cms
+version: 1.0.0
+router:
+  class: \Jcode\Cms\Controller
+  frontname: cms
